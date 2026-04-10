@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #87ceeb; /* Sky blue */
+  font-family: "Courier New", Courier, monospace;
+}
+
+#crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 10;
+  display: none;
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 20;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ffeb3b;
+}
+label {
+  font-size: 20px;
+  margin-top: 15px;
+}
+select {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+#classes {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.class-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+  border: 2px solid #666;
+}
+
+.class-btn.selected {
+  background-color: #4caf50;
+  border-color: #fff;
+}
+
+#playBtn {
+  margin-top: 30px;
+  padding: 15px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#playBtn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}

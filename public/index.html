@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blocky Shooter MVP</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div id="crosshair">+</div>
+
+    <div id="menu">
+      <h1>BLOCKY SHOOTER</h1>
+
+      <label>Select Server:</label>
+      <select id="serverSelect">
+        <option value="US-East">US-East (New York)</option>
+        <option value="EU-West">EU-West (London)</option>
+        <option value="Asia">Asia (Tokyo)</option>
+      </select>
+
+      <label>Select Class:</label>
+      <div id="classes">
+        <button class="class-btn" data-class="Assault">Assault</button>
+        <button class="class-btn" data-class="Sniper">Sniper</button>
+        <button class="class-btn" data-class="Heavy">Heavy</button>
+        <button class="class-btn" data-class="Scout">Scout</button>
+        <button class="class-btn" data-class="Shotgun">Shotgun</button>
+      </div>
+
+      <button id="playBtn" disabled>JOIN GAME</button>
+    </div>
+
+    <script type="module" src="client.js"></script>
+  </body>
+</html>
